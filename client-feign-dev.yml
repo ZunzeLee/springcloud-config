@@ -7,7 +7,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://eureka1.com:7001/eureka/,http://eureka2.com:7002/eureka/
-    register-with-eureka: false
+  instance:
+      prefer-ip-address: true
+      instance-id: client-feign
 feign:
   hystrix:
     enabled: true
